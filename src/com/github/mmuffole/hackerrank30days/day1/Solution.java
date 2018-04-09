@@ -5,18 +5,37 @@ import java.util.Scanner;
 public class Solution {
 
     public static void main(String[] args) {
-        //Create a scanner to read from stdin
+
+        int i = 12;
+        double d = 4.0;
+        String s = "HackerRank ";
+
         Scanner scan = new Scanner(System.in);
 
-        //Read a full line of input from stdin and save to
-        //variable called inputString
-        String inputString = scan.nextLine();
+        // ---- All of the above was provided by HackerRank ----
 
-        //Close scanner object, because we're finished reading
-        //all of the input from stdin for the challenge.
+        /* Declare second integer, double, and String variables. */
+
+        /* Read and save an integer, double, and String to your variables.*/
+        // Note: If you have trouble reading the entire String, please go back and review the Tutorial closely.
+        int ii = scan.nextInt();
+        double dd = scan.nextFloat();
+        scan.nextLine();
+        String ss = scan.nextLine();
+
         scan.close();
+        /* Print the sum of both integer variables on a new line. */
+        System.out.println(i + ii);
 
-        //Print a string literal saying "Hello, World." to stdout.
-        System.out.println("Hello, World.");
+        /* Print the sum of the double variables on a new line. */
+        System.out.printf("%.1f%n", (d + dd));
+        // printf does a formatted (aka specialty print), rather than just a new line print
+        // the format you want is in the double quotes
+        // %.1f prints to whatever is in front to 1 decimal places, %n adds a new line
+        // using %n instead of \n works agnostic of system
+
+        /* Concatenate and print the String variables on a new line;
+        	the 's' variable above should be printed first. */
+        System.out.println(s + ss);
     }
 }

@@ -6,36 +6,23 @@ public class Solution {
 
     public static void main(String[] args) {
 
-        int i = 12;
-        double d = 4.0;
-        String s = "HackerRank ";
+        Scanner in = new Scanner(System.in);
+        double meal_cost = in.nextDouble();
+        int tip_percent = in.nextInt();
+        int tax_percent = in.nextInt();
+        in.close();
 
-        Scanner scan = new Scanner(System.in);
+        // tip = 12 * 20/100 = 2.4
+        // tax = 12 * 8/100 = .96
+        // totalCost = mealCost + tip + tax = 12 + 2.4 + .96 = 15.36
+        // round(totalCost) = 15
+        // ---- All above provided by HackerRank -----
 
-        // ---- All of the above was provided by HackerRank ----
+        int tip = (tip_percent/100);
+        int tax = (tax_percent/100);
 
-        /* Declare second integer, double, and String variables. */
+        double totalCost = meal_cost + tip + tax;
 
-        /* Read and save an integer, double, and String to your variables.*/
-        // Note: If you have trouble reading the entire String, please go back and review the Tutorial closely.
-        int ii = scan.nextInt();
-        double dd = scan.nextFloat();
-        scan.nextLine();
-        String ss = scan.nextLine();
-
-        scan.close();
-        /* Print the sum of both integer variables on a new line. */
-        System.out.println(i + ii);
-
-        /* Print the sum of the double variables on a new line. */
-        System.out.printf("%.1f%n", (d + dd));
-        // printf does a formatted (aka specialty print), rather than just a new line print
-        // the format you want is in the double quotes
-        // %.1f prints to whatever is in front to 1 decimal places, %n adds a new line
-        // using %n instead of \n works agnostic of system
-
-        /* Concatenate and print the String variables on a new line;
-        	the 's' variable above should be printed first. */
-        System.out.println(s + ss);
+        System.out.println(totalCost);
     }
 }
