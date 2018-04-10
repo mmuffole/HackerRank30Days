@@ -18,11 +18,15 @@ public class Solution {
         // round(totalCost) = 15
         // ---- All above provided by HackerRank -----
 
-        int tip = (tip_percent/100);
-        int tax = (tax_percent/100);
+        double tip = (meal_cost*(tip_percent/100f));
+        double tax = (meal_cost*(tax_percent/100f));
+        // TODO: why do I have to add the "f" after 100?
+        // If I add the f after 100 or change tip/tax_percent to doubles, I get 15.36
+        // else I get 12.0 as my printed answer
+        double totalCost = (meal_cost + tip + tax);
 
-        double totalCost = meal_cost + tip + tax;
+        System.out.println("The total meal cost is " + totalCost + " dollars.");
 
-        System.out.println(totalCost);
+        // TODO: figure out how to make the rounding function work! :(
     }
 }
