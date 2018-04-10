@@ -1,4 +1,4 @@
-package com.github.mmuffole.hackerrank30days.day1;
+package com.github.mmuffole.hackerrank30days.day00;
 
 import java.util.Scanner;
 
