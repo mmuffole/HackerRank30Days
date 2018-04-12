@@ -12,20 +12,21 @@ public class Person {
             if(initialAge < 0){
                ansPerson = "Age is not valid, setting age to 0.";
             }
+            age = initialAge;
 
             System.out.println(ansPerson);
         }
 
-        public void amIOld(int initialAgeOld) {
+        public void amIOld(int initialAge) {
             // Write code determining if this person's age is old and print the correct statement:
             String ansAmIOld = "";
-            if(initialAgeOld < 13) {
+            if(initialAge < 13) {
                 ansAmIOld = "You are young.";
             }
-            else if(initialAgeOld >= 13 && initialAgeOld < 18) {
+            else if(initialAge >= 13 && initialAge < 18) {
                 ansAmIOld = "You are a teenager.";
             }
-            else if(initialAgeOld > 18) {
+            else if(initialAge > 18) {
                 ansAmIOld = "You are old.";
             }
                 System.out.println(ansAmIOld);
