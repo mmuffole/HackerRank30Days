@@ -11,9 +11,10 @@ public class Person {
             String ans = "";
             if(initialAge < 0){
                ans = "Age is not valid, setting age to 0.";
+            }
         }
 
-        public void amIOld(String[] initialAge) {
+        public void amIOld() {
             // Write code determining if this person's age is old and print the correct statement:
             if(initialAge < 13) {
                 ans = "You are young.";
