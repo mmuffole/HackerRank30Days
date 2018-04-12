@@ -8,24 +8,27 @@ public class Person {
         private int age;
 
         public Person(int initialAge) {
-            String ans = "";
+            String ansPerson = "";
             if(initialAge < 0){
-               ans = "Age is not valid, setting age to 0.";
+               ansPerson = "Age is not valid, setting age to 0.";
             }
+
+            System.out.println(ansPerson);
         }
 
-        public void amIOld() {
+        public void amIOld(int initialAgeOld) {
             // Write code determining if this person's age is old and print the correct statement:
-            if(initialAge < 13) {
-                ans = "You are young.";
+            String ansAmIOld = "";
+            if(initialAgeOld < 13) {
+                ansAmIOld = "You are young.";
             }
-            else if(initialAge >= 13 && initialAge < 18) {
-                ans = "You are a teenager.";
+            else if(initialAgeOld >= 13 && initialAgeOld < 18) {
+                ansAmIOld = "You are a teenager.";
             }
-            else if(initialAge > 18) {
-                ans = "You are old.";
+            else if(initialAgeOld > 18) {
+                ansAmIOld = "You are old.";
             }
-                System.out.println(ans);
+                System.out.println(ansAmIOld);
         }
 
         public void yearPasses() {
@@ -48,4 +51,4 @@ public class Person {
         }
         sc.close();
     }
-}
+
