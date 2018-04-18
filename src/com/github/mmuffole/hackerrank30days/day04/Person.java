@@ -34,6 +34,10 @@ public class Person {
 
         public void yearPasses() {
             // Increment this person's age.
+            String ansYearPasses = "";
+            for (int yearPasses = 0; yearPasses < 100; yearPasses++); {
+                System.out.println(ansYearPasses);
+            }
         }
 }
 
@@ -43,7 +47,7 @@ public class Person {
         for (int i = 0; i < T; i++) {
             int age = sc.nextInt();
             Person p = new Person(age);
-            p.amIOld();
+            p.amIOld(initialAge);
             for (int j = 0; j < 3; j++) {
                 p.yearPasses();
             }
