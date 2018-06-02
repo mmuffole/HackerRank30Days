@@ -10,24 +10,24 @@ public class Person {
     public Person(int initialAge) {
         String ans = "";
         if (initialAge < 0) {
-            ans = "Age is not valid, setting age to 0.";
-        }
-        age = initialAge;
+            age = 0;
+            System.out.println("Age is not valid, setting age to 0.");
 
-        System.out.println(ans);
+        } else {
+            age = initialAge;
+        }
     }
 
     public void amIOld() {
         // Write code determining if this person's age is old and print the correct statement:
         String ansAmIOld = "";
         if (age < 13) {
-            ansAmIOld = "You are young.";
+            System.out.println("You are young.");
         } else if (age >= 13 && age < 18) {
-            ansAmIOld = "You are a teenager.";
-        } else if (age >= 18) {
-            ansAmIOld = "You are old.";
+            System.out.println("You are a teenager.");
+        } else {
+            System.out.println("You are old.");
         }
-        System.out.println(ansAmIOld);
     }
 
     public void yearPasses() {
