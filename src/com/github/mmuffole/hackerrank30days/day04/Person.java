@@ -8,23 +8,23 @@ public class Person {
     private int age;
 
     public Person(int initialAge) {
-        String ansPerson = "";
+        String ans = "";
         if (initialAge < 0) {
-            ansPerson = "Age is not valid, setting age to 0.";
+            ans = "Age is not valid, setting age to 0.";
         }
         age = initialAge;
 
-        System.out.println(ansPerson);
+        System.out.println(ans);
     }
 
-    public void amIOld(int initialAge) {
+    public void amIOld() {
         // Write code determining if this person's age is old and print the correct statement:
         String ansAmIOld = "";
-        if (initialAge < 13) {
+        if (age < 13) {
             ansAmIOld = "You are young.";
-        } else if (initialAge >= 13 && initialAge < 18) {
+        } else if (age >= 13 && age < 18) {
             ansAmIOld = "You are a teenager.";
-        } else if (initialAge > 18) {
+        } else if (age >= 18) {
             ansAmIOld = "You are old.";
         }
         System.out.println(ansAmIOld);
@@ -32,25 +32,21 @@ public class Person {
 
     public void yearPasses() {
         // Increment this person's age.
-        String ansYearPasses = "";
-        for (int yearPasses = 0; yearPasses < 100; yearPasses++) ;
-        {
-            System.out.println(ansYearPasses);
-        }
+        age++;
     }
 
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int T = sc.nextInt();
-        for (int i = 0; i < T; i++) {
+        int tries = sc.nextInt();
+        for (int i = 0; i < tries; i++) {
             int age = sc.nextInt();
             Person p = new Person(age);
-            p.amIOld(i);
+            p.amIOld();
             for (int j = 0; j < 3; j++) {
                 p.yearPasses();
             }
-            p.amIOld(i);
+            p.amIOld();
             System.out.println();
         }
         sc.close();
